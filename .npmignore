@@ -1,0 +1,10 @@
+/*
+!/README.md
+!/.gitignore
+!/.npmignore
+!/LICENSE
+!/tsconfig.json
+!/tsconfig.types.json
+!/package.json
+!/lib
+!/dist

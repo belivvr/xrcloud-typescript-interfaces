@@ -1,0 +1,75 @@
+{
+  "name": "@xrcloud/interfaces",
+  "version": "0.0.1",
+  "description": "XRCloud TypeScript interfaces",
+  "homepage": "https://github.com/belivvr/xrcloud-typescript-interfaces",
+  "repository": "belivvr/xrcloud-typescript-interfaces",
+  "link": true,
+  "main": "lib/index.js",
+  "unpkg": "dist/index.min.js",
+  "types": "lib/index.d.ts",
+  "module": "lib/index.mjs",
+  "scripts": {
+    "bun:build": "bun build:commonjs && bun build:es && bun build:umd && bun build:types",
+    "build": "pnpm build:commonjs && pnpm build:es && pnpm build:umd && pnpm build:types",
+    "build:commonjs": "rimraf './lib/**/*.js' && cross-env BABEL_ENV=commonjs babel --extensions .ts,.tsx --ignore ./src/**/tests/**/* ./src --out-dir lib",
+    "build:es": "rimraf './lib/**/*.mjs' && cross-env BABEL_ENV=es babel --extensions .ts,.tsx --ignore ./src/**/tests/**/* ./src --out-dir lib --out-file-extension .mjs",
+    "build:umd": "rimraf ./dist && cross-env NODE_ENV=production rollup -c && rollup-plugin-visualizer stats-react.json",
+    "build:types": "rimraf './lib/**/*.d.ts' && tsc --project ./tsconfig.types.json"
+  },
+  "keywords": [],
+  "author": "juunini",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@svgr/rollup": "^6.3.1",
+    "@types/node": "^18.7.13",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-add-import-extension": "^1.6.0",
+    "babel-plugin-const-enum": "^1.2.0",
+    "babel-plugin-transform-async-to-promises": "^0.8.18",
+    "bun-types": "^0.1.0",
+    "bundlewatch": "^0.3.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.23.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "process": "^0.11.10",
+    "replace": "^1.2.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.78.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-browserify-transform": "^1.0.1",
+    "rollup-plugin-jscc": "^2.0.0",
+    "rollup-plugin-node-externals": "^4.1.1",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "rollup-plugin-polyfill": "^4.0.0",
+    "rollup-plugin-size": "^0.2.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-visualizer": "^5.8.0",
+    "type-fest": "^2.19.0",
+    "typescript": "4.7.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.18.9"
+  },
+  "bundlewatch": {
+    "files": [
+      {
+        "path": "dist/*.min.js"
+      }
+    ]
+  }
+}
