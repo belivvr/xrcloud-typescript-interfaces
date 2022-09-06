@@ -1,6 +1,6 @@
 {
   "name": "@xrcloud/interfaces",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "XRCloud TypeScript interfaces",
   "homepage": "https://github.com/belivvr/xrcloud-typescript-interfaces",
   "repository": "belivvr/xrcloud-typescript-interfaces",

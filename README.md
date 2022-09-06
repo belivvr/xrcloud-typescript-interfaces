@@ -24,8 +24,8 @@ XRCloud TypeScript interfaces
 ```console
 $ npm install --save-dev @xrcloud/interfaces
 $ yarn add --dev @xrcloud/interfaces
-$ pnpm add --dev @xrcloud/interfaces
-$ bun add --dev @xrcloud/interfaces
+$ pnpm add --save-dev @xrcloud/interfaces
+$ bun add --development @xrcloud/interfaces
 ```
 
 ## Usage
