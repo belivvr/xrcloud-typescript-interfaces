@@ -6,11 +6,13 @@
     "emitDeclarationOnly": true,
     "noEmit": false,
     "paths": {
-      "@xrcloud/interfaces": ["./src/index.tsx"]
+      "@xrcloud/interfaces": ["./src/index.ts"],
+      "@xrcloud/interfaces/dto": ["./src/dto/index.ts"]
     }
   },
   "files": [
-    "./src/index.tsx",
+    "./src/index.ts",
+    "./src/dto/index.ts"
   ],
   "exclude": ["./src/**/*", "./tests/**/*", "./jest.setup.ts"]
 }

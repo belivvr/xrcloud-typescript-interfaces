@@ -1,0 +1,7 @@
+{
+  "internal": true,
+  "main": "../lib/dto/index.js",
+  "unpkg": "../dist/dto.min.js",
+  "module": "../lib/dto/index.mjs",
+  "types": "../lib/dto/index.d.ts"
+}

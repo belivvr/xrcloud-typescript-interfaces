@@ -15,7 +15,8 @@
     "skipLibCheck": true,
     "strict": true,
     "paths": {
-      "@xrcloud/interfaces": ["./src/index.tsx"]
+      "@xrcloud/interfaces": ["./src/index.ts"],
+      "@xrcloud/interfaces/dto": ["./src/dto/index.ts"]
     },
     "types": [
       "bun-types"

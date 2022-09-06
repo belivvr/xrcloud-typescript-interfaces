@@ -9,12 +9,10 @@ import replace from '@rollup/plugin-replace'
 import { defineConfig } from 'rollup'
 
 const external = ['@xrcloud/interfaces']
-const globals = {
-  react: 'React',
-  'react-dom': 'ReactDOM'
-}
+const globals = {}
 const inputSrcs = [
-  ['src/index.tsx', '@xrcloud/interfaces', 'index']
+  ['src/index.ts', '@xrcloud/interfaces', 'index'],
+  ['src/dto/index.ts', '@xrcloud/interfaces/dto', 'dto']
 ]
 const extensions = ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', '.tsx']
 const babelConfig = {
